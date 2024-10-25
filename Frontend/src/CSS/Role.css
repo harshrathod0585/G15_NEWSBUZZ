@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    gap: 20px;
+}
+
+.role-button {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--order) * 0.2s);
+    /* Add delay for each button */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #191c19;
+    transform: translateY(-5px);
+}
+
+/* Click animation */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
